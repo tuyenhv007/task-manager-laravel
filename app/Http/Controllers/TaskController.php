@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FormTaskRequest;
 use App\Tasks;
 use Illuminate\Support\Facades\Session;
 use http\Env\Response;
@@ -30,7 +31,7 @@ class TaskController extends Controller
         return view('tasks.create');
     }
 
-    public function store( Request $request)
+    public function store( FormTaskRequest $request)
     {
 //        $task = new Tasks();
 //        $task->title = $request->inputTitle;
